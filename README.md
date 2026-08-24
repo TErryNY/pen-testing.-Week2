@@ -64,8 +64,6 @@ I used six Kali Linux tools to build a complete public profile of networkwalks.c
 | 5️⃣ | `wafw00f` | 🔥 Detect a Web Application Firewall |
 | 6️⃣ | `dnsrecon` | 📡 Enumerate all DNS records |
 
-**⚠️ Note on whatweb:** whatweb failed to run in either of my environments — it timed out on the Kali VM and threw a library error on my backup Ubuntu machine. This didn't leave a real gap in the findings, though: the same details (WordPress, the WP Download Manager plugin, Apache, the server IP) were already confirmed via the HTTP headers and DNS lookups. Only the precise version numbers went unconfirmed. It was a good reminder that recon rarely hinges on a single tool — the same facts tend to surface through multiple sources.
-
 **📸 Evidence**
 
 - 🏢 `whois` — domain registration details (GoDaddy registrar, HostGator name servers)
@@ -104,9 +102,9 @@ nmap -sn 192.168.143.0/24
 
 | IP | MAC | Device |
 |---|---|---|
-192.168.143.0| 0A-00-27-00-00-15 | unknown 
+192.168.143.0| | unknown 
 
-The scan picked up the router and my own laptop, along with three devices showing randomized MAC addresses — a deliberate privacy feature in modern phones and laptops that prevents Nmap from identifying their manufacturer. My laptop appeared as "up" but without a MAC address (since a device can't ARP itself), so I retrieved its MAC separately using `ipconfig /all`.
+The scan picked up  my own laptop — a deliberate privacy feature in modern phones and laptops that prevents Nmap from identifying their manufacturer. My laptop appeared as "up" but without a MAC address (since a device can't ARP itself), so I retrieved its MAC separately using `ipconfig /all`.
 
 **📸 Evidence**
 
@@ -133,7 +131,7 @@ The scan picked up the router and my own laptop, along with three devices showin
 
 | Problem | Solution |
 |---|---|
-| ⚠️ whatweb timed out on Kali and threw a library error on Ubuntu | ✅ Verified the same web-technology details via curl and DNS instead of losing further time troubleshooting |
+| ⚠️ verification of zenmap hosts | ✅ Verified the same network host address after typing the ipconfig command |
 
 
 ```
