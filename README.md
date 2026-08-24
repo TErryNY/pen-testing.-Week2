@@ -138,7 +138,7 @@ The scan picked up  my own laptop — a deliberate privacy feature in modern pho
 
 ## 📄 Full Report
 
-The complete penetration testing report covering both modules — including the disclaimer, methodology, findings, risk analysis, recommendations, and supporting evidence — is available here: 📎 [W2-PM-FINAL_Abdullatif_Abuzannad.pdf](./report/Terry.Nyambe.penetration.testing.report - Copy)
+The complete penetration testing report covering both modules — including the disclaimer, methodology, findings, risk analysis, recommendations, and supporting evidence — is available here: 📎( https://github.com/TErryNY/pen-testing.-Week2/blob/main/README.md)
 
 ## ⚖️ Disclaimer
 
